@@ -21,7 +21,7 @@ El proyecto combina la gestión deportiva con partidos interactivos, supertécni
 - **Preparar estrategias:** ajusta formaciones, tácticas y alineaciones.
 - **Entrenar a tus futbolistas:** mejora sus capacidades y desarrolla tu plantilla.
 - **Jugar partidos interactivos:** toma decisiones durante los encuentros y utiliza supertécnicas.
-- **Gestionar tus recursos:** administra el presupuesto y los Puntos Pasión.
+- **Gestionar tus recursos:** administra el presupuesto y los puntos de pasión.
 - **Guardar tu progreso:** continúa tus partidas y utiliza la exportación e importación para hacer copias de seguridad.
 
 ## 🏆 Modos de juego
