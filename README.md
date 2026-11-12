@@ -1,155 +1,119 @@
-# ⚡ Inazuma Manager – Simulador de Gestión de Fútbol
+# ⚡ FF Manager — Fútbol Frontier Manager
 
-![Status](https://img.shields.io/badge/Status-En%20desarrollo-blue)
-![Category](https://img.shields.io/badge/Category-Gaming%20%2F%20Simulación-purple)
-![Stack](https://img.shields.io/badge/Stack-React%20%7C%20Vite%20%7C%20Tailwind%20CSS-38BDF8)
-![Language](https://img.shields.io/badge/Language-JavaScript-yellow)
+**Crea tu club. Forma tu equipo. Escribe tu propia historia.**
 
-**Inazuma Manager** es una aplicación web inspirada en el universo de *Inazuma Eleven*, desarrollada para ofrecer una experiencia de gestión futbolística en la que el jugador puede construir su propio club, fichar futbolistas, administrar su plantilla y organizar su equipo.
+![Estado](https://img.shields.io/badge/Estado-En%20desarrollo-0EA5E9)
+![Tipo](https://img.shields.io/badge/Tipo-Juego%20de%20gestión%20deportiva-2563EB)
+![Plataforma](https://img.shields.io/badge/Plataforma-Web-14B8A6)
 
-El proyecto combina una interfaz moderna con una ambientación inspirada en el universo de Inazuma Eleven, buscando trasladar la experiencia de un simulador de gestión deportiva a una aplicación web interactiva.
+**FF Manager (Fútbol Frontier Manager)** es un juego de gestión futbolística para navegador, inspirado en el universo de *Inazuma Eleven*.
 
-La aplicación está desarrollada con **React, Vite y Tailwind CSS**, utilizando una arquitectura basada en componentes reutilizables y un sistema de contexto para centralizar el estado de la partida.
+Conviértete en el responsable de tu propio club, reúne a tus jugadores favoritos, prepara tus tácticas y compite para llevar a tu equipo hasta lo más alto.
 
----
-
-## 🎯 Propósito del Proyecto
-
-El objetivo de Inazuma Manager es desarrollar un simulador de gestión deportiva que permita al usuario tomar decisiones sobre la construcción y administración de su propio equipo.
-
-La aplicación busca combinar tres pilares fundamentales:
-
-- **Gestión deportiva:** creación y administración de un club, selección de entrenador y organización de la plantilla.
-- **Mercado de fichajes:** exploración de jugadores, búsqueda de futbolistas y gestión de incorporaciones.
-- **Experiencia inmersiva:** diseño visual inspirado en Inazuma Eleven, acompañado de música ambiental y una interfaz temática.
-
-## 📐 Arquitectura del Sistema
-
-Inazuma Manager utiliza una arquitectura basada en componentes de React, separando la interfaz visual, el estado global de la aplicación y las funcionalidades específicas de cada sección.
-
-La gestión del estado se centraliza mediante **React Context**, permitiendo que diferentes componentes accedan a la información de la partida sin necesidad de transmitir propiedades manualmente a través de múltiples niveles.
-
-Además, el sistema musical cuenta con un contexto independiente para centralizar la reproducción y sus controles.
-
-### Diagrama de arquitectura
-
-```mermaid
-graph TD
-    A[Inazuma Manager] --> B[React Application]
-
-    B --> C[GameProvider]
-    B --> D[MusicProvider]
-
-    C --> E[GameContext]
-    D --> F[MusicContext]
-
-    E --> G[Game State]
-    E --> H[Club and Players]
-    E --> I[Budget and Game Date]
-    E --> J[Navigation and Slots]
-
-    F --> K[Global Audio Controller]
-    K --> L[Menu Music]
-    K --> M[Game Playlist]
-
-    B --> N[User Interface]
-
-    N --> O[Main Menu]
-    N --> P[Game Navbar]
-    N --> Q[Player Catalog]
-    N --> R[Club Management]
-    N --> S[Formation Screen]
-
-    style A fill:#0EA5E9,stroke:#0284C7,color:#fff
-    style C fill:#2563EB,stroke:#1D4ED8,color:#fff
-    style D fill:#7C3AED,stroke:#6D28D9,color:#fff
-    style K fill:#059669,stroke:#047857,color:#fff
-    style N fill:#334155,stroke:#1E293B,color:#fff
-```
-
-## 🛠️ Stack Tecnológico
-
-| Categoría | Herramientas / Tecnologías |
-|---|---|
-| **Lenguaje** | JavaScript (ES6+) |
-| **Framework UI** | React |
-| **Entorno de desarrollo** | Vite |
-| **Estilos** | Tailwind CSS |
-| **Tipografía** | Rajdhani, Inter |
-| **Iconografía** | Bootstrap Icons |
-| **Gestión del estado** | React Context API |
-| **Hooks** | useState, useEffect, useContext, useRef, useMemo |
-| **Audio** | HTML5 Audio API |
-| **Formato de datos** | JavaScript / JSON |
-| **Herramientas** | Visual Studio Code, Node.js, npm |
-| **Control de versiones** | Git / GitHub |
+El proyecto combina la gestión deportiva con partidos interactivos, supertécnicas y una progresión a largo plazo.
 
 ---
 
-## 📸 Galería de la Aplicación
+## ⚽ ¿Qué puedes hacer en FF Manager?
 
-A continuación se pueden incorporar capturas reales de las diferentes pantallas de Inazuma Manager para mostrar la experiencia visual y las funcionalidades desarrolladas.
+- **Crear tu propio club:** elige su nombre, escudo y entrenador.
+- **Construir tu plantilla:** ficha jugadores y organiza tu equipo.
+- **Preparar estrategias:** ajusta formaciones, tácticas y alineaciones.
+- **Entrenar a tus futbolistas:** mejora sus capacidades y desarrolla tu plantilla.
+- **Jugar partidos interactivos:** toma decisiones durante los encuentros y utiliza supertécnicas.
+- **Gestionar tus recursos:** administra el presupuesto y los Puntos Pasión.
+- **Guardar tu progreso:** continúa tus partidas y utiliza la exportación e importación para hacer copias de seguridad.
 
-<table align="center">
-  <tr>
-    <td align="center" valign="top">
-      <img src="screenshots/welcome.png" width="280" alt="Pantalla de bienvenida"/>
-      <br/>
-      <sub><b>Welcome Screen</b></sub>
-    </td>
-    <td align="center" valign="top">
-      <img src="screenshots/main-menu.png" width="280" alt="Menú principal"/>
-      <br/>
-      <sub><b>Main Menu</b></sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <img src="screenshots/player-catalog.png" width="280" alt="Mercado de jugadores"/>
-      <br/>
-      <sub><b>Player Catalog</b></sub>
-    </td>
-    <td align="center" valign="top">
-      <img src="screenshots/my-club.png" width="280" alt="Gestión del club"/>
-      <br/>
-      <sub><b>Club Management</b></sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <img src="screenshots/formation.png" width="280" alt="Formación del equipo"/>
-      <br/>
-      <sub><b>Team Formation</b></sub>
-    </td>
-    <td align="center" valign="top">
-      <img src="screenshots/music-player.png" width="280" alt="Reproductor musical"/>
-      <br/>
-      <sub><b>Music Player</b></sub>
-    </td>
-  </tr>
-</table>
+## 🏆 Modos de juego
 
-*Las imágenes anteriores son rutas de ejemplo. Para mostrar las capturas en GitHub, crea una carpeta `screenshots/` en la raíz del proyecto y coloca las imágenes correspondientes.*
+### 📖 Modo Historia
+
+Recorre diferentes sagas y enfrentamientos inspirados en Inazuma Eleven.
+
+Construye tu equipo, supera rivales y avanza a través de una campaña con desafíos y recompensas.
+
+### 🏟️ Modo Carrera
+
+Dirige tu club a lo largo de múltiples temporadas.
+
+Compite en un sistema de **cinco divisiones**, lucha por ascender, evita los descensos y construye la historia de tu equipo.
+
+El juego conserva estadísticas, resultados y recuerdos de las temporadas anteriores.
 
 ---
 
-## 🧠 Decisiones de Diseño y Desarrollo
+## 📸 Capturas del juego
 
-Durante el desarrollo se han priorizado diferentes aspectos técnicos y visuales:
+*Aquí se mostrarán capturas reales y actualizadas de FF Manager.*
 
-- **Componentización:** dividir la interfaz en componentes independientes para facilitar su reutilización y mantenimiento.
-- **Centralización del estado:** utilizar Context API para compartir información entre las diferentes secciones.
-- **Separación de responsabilidades:** mantener diferenciadas la navegación, la gestión de partidas y la reproducción musical.
-- **Experiencia de usuario:** ofrecer una navegación clara y controles accesibles.
-- **Identidad visual:** utilizar una estética oscura con acentos azules y amarillos inspirados en la ambientación deportiva.
-- **Gestión del audio:** mantener un único reproductor para evitar duplicaciones de música durante los cambios de pantalla.
+**Menú principal**
+
+![Menú principal](screenshots/main-menu.png)
+
+**Gestión de plantilla**
+
+![Gestión del club](screenshots/my-club.png)
+
+**Formación y tácticas**
+
+![Formación](screenshots/formation.png)
+
+**Partidos**
+
+![Partido](screenshots/match.png)
+
+> Las imágenes se mostrarán cuando se añadan los archivos correspondientes a la carpeta `screenshots/`.
 
 ---
 
-## 📄 Licencia y Créditos
+## 🚧 Estado del proyecto
 
-Proyecto desarrollado con fines educativos y de entretenimiento, inspirado en el universo de *Inazuma Eleven*.
+**FF Manager está actualmente en desarrollo y preparación para su primera versión pública.**
 
-Inazuma Eleven y sus personajes, nombres y elementos originales pertenecen a sus respectivos propietarios. Este proyecto es un trabajo independiente y no oficial, sin afiliación con LEVEL-5 ni con los titulares de sus derechos.
+Los modos Historia y Carrera ya son jugables, y estamos trabajando en las últimas comprobaciones de estabilidad, compatibilidad y experiencia de usuario.
 
-Los recursos de terceros utilizados mantienen los derechos y licencias de sus respectivos propietarios.
+El objetivo es publicar una primera versión jugable y continuar ampliándola mediante actualizaciones.
+
+## 🔮 Futuras actualizaciones
+
+Entre las ideas que estamos valorando para versiones posteriores se encuentran:
+
+- Nuevas formas de conseguir jugadores, como un modo Draft.
+- Eventos y situaciones durante la carrera.
+- Nuevos contenidos y mejoras de la experiencia de gestión.
+- Ajustes de equilibrio y mejoras basadas en los comentarios de los jugadores.
+
+Estas funciones son planes de desarrollo y todavía no forman parte de la versión actual.
+
+## 📰 Novedades y versiones
+
+FF Manager contará con un apartado de novedades donde los jugadores podrán consultar los cambios de cada actualización, incluyendo nuevas funcionalidades, correcciones de errores y ajustes de balance.
+
+---
+
+## 💻 Tecnología
+
+FF Manager se desarrolla como una aplicación web utilizando:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+El código fuente se mantiene en un repositorio privado durante el desarrollo.
+
+---
+
+## ⚖️ Aviso legal
+
+FF Manager es un proyecto independiente creado por fans, inspirado en el universo de *Inazuma Eleven*.
+
+No es un producto oficial ni está afiliado, patrocinado o respaldado por LEVEL-5.
+
+*Inazuma Eleven*, sus personajes y otros elementos originales pertenecen a sus respectivos titulares de derechos.
+
+Los recursos de terceros conservan sus correspondientes derechos y licencias.
+
+---
+
+**⚡ FF Manager — Tu club. Tus decisiones. Tu historia.**
